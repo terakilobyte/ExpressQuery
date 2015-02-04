@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+        canvas#paper(width="800px", height="600px")
+        script.
+            var textToDisplay = !{JSON.stringify(textToDisplay)};
+            var bgColor = !{JSON.stringify(color)};
+            console.log(bgColor);
+        script(src='javascripts/draw.js')
